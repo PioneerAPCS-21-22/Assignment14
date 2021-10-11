@@ -86,17 +86,17 @@ public class Lottery
         
         if(win == 3)
         {
-            System.out.println("You win $" + jackpot + "!");
+            System.out.println("You won the jackpot! You win $" + jackpot + "!");
         }
 
         else if(win == 2)
         {
-            System.out.println("You win $" + (jackpot / 2) + "!");
+            System.out.println("You matched two numbers! You win $" + (jackpot / 2) + "!");
         }
 
         else if(win == 1)
         {
-            System.out.println("You win $1!");
+            System.out.println("You matched one number! You win $1!");
         }
 
         else 
