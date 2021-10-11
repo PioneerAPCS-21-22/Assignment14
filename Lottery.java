@@ -49,7 +49,7 @@ public class Lottery
      */
     private int getJackpot()
     {
-        return (int) (10000 * Math.random() + 1000);
+        return (int) (9000 * Math.random() + 1000);
     }
 
     /**
