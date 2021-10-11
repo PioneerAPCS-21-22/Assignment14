@@ -19,7 +19,7 @@ public class Main
         int n3 = in.nextInt();
         
         
-        // make sure each number is between 0 and 9.
+        // make sure each number is between 1 and 10.
         // make sure no numbers are the same.
         
         
