@@ -45,7 +45,7 @@ You lose!
 ```
 ```
 Enter your three numbers:
-10
+0
 3
 2
 Invalid input.
