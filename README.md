@@ -29,7 +29,7 @@ You win $10,000!
 ```
 ```
 Enter your three numbers: 
-0
+2
 9
 7
 The winning numbers: 4, 7, 1
