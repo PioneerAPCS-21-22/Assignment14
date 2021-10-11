@@ -40,7 +40,7 @@ Enter your three numbers:
 1
 8
 7
-The winning numbers: 4, 2, 10
+The winning numbers: 4, 2, 0
 You lose!
 ```
 ```
