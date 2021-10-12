@@ -1,0 +1,125 @@
+/**
+ * Write a description of class Lottery here.
+ * 
+ * @author Mr. King
+ * @version 10/11/2021
+ */
+public class Lottery
+{
+    private int n1, n2, n3, jackpot;
+    private int w1, w2, w3;
+
+    /**
+     * Constructor
+     * Jackpot is initialized using the getJackpot method.
+     * w1, w2, and w3 are initialized using the generateNum method.
+     * 
+     * @param first - first guess
+     * @param second - second guess
+     * @param third - third guess
+     */
+    public Lottery(int first, int second, int third)
+    {
+        n1 = first;
+        n2 = second;
+        n3 = third;
+        jackpot = getJackpot();
+        w1 = generateNum();
+        w2 = generateNum();
+        w3 = generateNum();
+    }
+    
+    
+    /**
+     * Checks the player's numbers against the winning numbers.
+     * Calls printResult method and passes corresponding value.
+     * 
+     * @param none
+     * @return none
+     */
+    public void checkMatch()
+    {
+        int matches = 0;
+
+        if (n1 == w1 || n1 == w2 || n1 == w3){
+            matches += 1;
+        }
+
+        if (n2 == w1 || n2 == w2 || n2 == w3){
+            matches += 1;
+        }
+
+        if (n3 == w1 || n3 == w2 || n3 == w3){
+            matches += 1;
+        }
+                
+        printResult(matches);
+    }
+    
+    
+    /* DO NOT EDIT BELOW THIS LINE */
+
+    /**
+     * Generates the jackpot.
+     * 
+     * @param none
+     * @return an integer [1000, 9999]
+     */
+    private int getJackpot()
+    {
+        return (int) (9000 * Math.random() + 1000);
+    }
+
+    /**
+     * Generates a random number.
+     * 
+     * @param none
+     * @return an integer [0, 9]
+     */
+    private int generateNum()
+    {
+        int n = (int) (10 * Math.random()) + 1;
+        
+        while(n == w1 || n == w2)
+        {
+            n = (int) (10 * Math.random()) + 1;
+        }
+        
+        return n;
+    }
+
+    /**
+     * win = 3 means all three numbers matched.
+     * win = 2 means two numbers matched.
+     * win = 1 means one number matched.
+     * win = 0 means one number matched.
+     * 
+     * @param win - the corresponding value for the result.
+     * @return none
+     * 
+     */
+    private void printResult(int win)
+    {
+        System.out.println("The winning numbers are: " + w1 + ", " + w2 + ", and " + w3);
+        
+        if(win == 3)
+        {
+            System.out.println("You won the jackpot! You win $" + jackpot + "!");
+        }
+
+        else if(win == 2)
+        {
+            System.out.println("You matched two numbers! You win $" + (jackpot / 2) + "!");
+        }
+
+        else if(win == 1)
+        {
+            System.out.println("You matched one number! You win $1!");
+        }
+
+        else 
+        {
+            System.out.println("You lost!");
+        }
+    }
+}
